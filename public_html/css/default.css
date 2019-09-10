@@ -12,4 +12,7 @@ a {
 a:visited {
   color: #61adee; }
 
+#backgammonCanvas {
+  width: 800px; }
+
 /*# sourceMappingURL=default.css.map */
