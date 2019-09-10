@@ -1,0 +1,32 @@
+/* donations.defaul.css */
+/* (c) inoro 2019 GPL v3 */
+
+body {
+    margin: 0px;
+    font-size: 17px;
+    font-family: "My Courier New", "Courier New";
+    background-color: #cbcbcb;
+}
+
+/*############################################################################*/
+#full_cont {
+    background-color: #ffffff;
+    min-width: 280px;
+    width: auto;
+    max-width: 280px;
+    margin: 20px auto;
+    text-align: center;
+
+    padding: 20px;
+}
+
+/*############################################################################*/
+.data_table {
+    text-align: center;
+    margin: 0px auto;
+}
+
+/*############################################################################*/
+.cryptoaddress {
+    font-size: 0.80em;
+}
