@@ -1,9 +1,7 @@
 
-function draw_board(bgc, m) {
-    var ctx = bgc.getContext("2d");
-
-    ctx.strokeStyle = "#ffffff";
-    ctx.lineWidth = 5;
+function draw_board(ctx, m) {
+    // ctx.strokeStyle = "#ffffff";
+    // ctx.lineWidth = 5;
 
     // BORDES
     // ctx.fillStyle = "#2c3037";
