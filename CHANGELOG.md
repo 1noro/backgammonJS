@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 - El margen exterior del tablero, tanto en el diseño original cómo en el canvas.
 - Establecidas las bases para dibujar las fichas en el tablero de una forma fácil.
+- Modo exposición completado.
 
 ## 20190910a - 2019-09-10 21:42
 ### Added
