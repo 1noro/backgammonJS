@@ -1,7 +1,7 @@
 
-function draw_black_token(cx, cy, m) {
+function draw_black_token(ctx, cx, cy, m, tBw) {
     ctx.beginPath();
-    ctx.arc(cx*m, cy*m, 10*m-2, 0, 2*Math.PI);
+    ctx.arc(cx*m, cy*m, 10*m-(tBw/2), 0, 2*Math.PI);
     ctx.closePath();
     ctx.strokeStyle = "#ffffff";
     ctx.stroke();
@@ -9,9 +9,9 @@ function draw_black_token(cx, cy, m) {
     ctx.fill();
 }
 
-function draw_white_token(cx, cy, m) {
+function draw_white_token(ctx, cx, cy, m, tBw) {
     ctx.beginPath();
-    ctx.arc(cx*m, cy*m, 10*m-2, 0, 2*Math.PI);
+    ctx.arc(cx*m, cy*m, 10*m-(tBw/2), 0, 2*Math.PI);
     ctx.closePath();
     ctx.strokeStyle = "#000000";
     ctx.stroke();
@@ -20,6 +20,9 @@ function draw_white_token(cx, cy, m) {
 }
 
 function draw_initial_layout(ctx, m) {
+    var tBw = 6; // token_border_width
+    ctx.lineWidth = tBw;
+
     // [(x1, y1), (x2, y2), (x3, y3), (x4, y4), (x5, y5)]
     var vboard = [
         [[ 1,  1], [ 1,  2], [ 1,  3], [ 1, 4], [ 1, 5]], // 12
@@ -78,8 +81,6 @@ function draw_initial_layout(ctx, m) {
         [0, 2], // 24
     ]
 
-    ctx.lineWidth = 5;
-
     // token 1 (roja)
     // ctx.beginPath();
     // ctx.arc(30*m, 30*m, 10*m, 0, 2*Math.PI);
@@ -88,38 +89,28 @@ function draw_initial_layout(ctx, m) {
     // ctx.fillStyle = "#981f28";
     // ctx.fill();
 
-    ctx.beginPath();
-    ctx.arc(xyTm(0,m), xyTm(0,m), 10*m-2, 0, 2*Math.PI);
-    ctx.closePath();
-    ctx.strokeStyle = "#ffffff";
-    ctx.stroke();
-    ctx.fillStyle = "#981f28";
-    ctx.fill();
+    // ctx.beginPath();
+    // ctx.arc(xyTm(0,m), xyTm(0,m), 10*m-2, 0, 2*Math.PI);
+    // ctx.closePath();
+    // ctx.strokeStyle = "#ffffff";
+    // ctx.stroke();
+    // ctx.fillStyle = "#981f28";
+    // ctx.fill();
 
     var i = 0;
     while (i < tkstate.length) {
         var e = 0;
         while (e < tkstate[i][0]) {
             // tokens negros
-            ctx.beginPath();
-            ctx.arc(xyTm(vboard[i][e][0], m), xyTm(vboard[i][e][1], m), 10*m-2, 0, 2*Math.PI);
-            ctx.closePath();
-            ctx.strokeStyle = "#ffffff";
-            ctx.stroke();
-            ctx.fillStyle = "#981f28";
-            ctx.fill();
+            // ctx.arc(xyTm(vboard[i][e][0], m), xyTm(vboard[i][e][1], m), 10*m-2, 0, 2*Math.PI);
+            draw_black_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
             e++;
         }
         e = 0;
         while (e < tkstate[i][1]) {
             // tokens blancos
-            ctx.beginPath();
-            ctx.arc(xyTm(vboard[i][e][0], m), xyTm(vboard[i][e][1], m), 10*m-2, 0, 2*Math.PI);
-            ctx.closePath();
-            ctx.strokeStyle = "#000000";
-            ctx.stroke();
-            ctx.fillStyle = "#ffffff";
-            ctx.fill();
+            // ctx.arc(xyTm(vboard[i][e][0], m), xyTm(vboard[i][e][1], m), 10*m-2, 0, 2*Math.PI);
+            draw_white_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
             e++;
         }
         i++;
