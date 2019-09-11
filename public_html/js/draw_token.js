@@ -81,22 +81,6 @@ function draw_initial_layout(ctx, m) {
         [0, 2], // 24
     ]
 
-    // token 1 (roja)
-    // ctx.beginPath();
-    // ctx.arc(30*m, 30*m, 10*m, 0, 2*Math.PI);
-    // ctx.closePath();
-    // ctx.stroke();
-    // ctx.fillStyle = "#981f28";
-    // ctx.fill();
-
-    // ctx.beginPath();
-    // ctx.arc(xyTm(0,m), xyTm(0,m), 10*m-2, 0, 2*Math.PI);
-    // ctx.closePath();
-    // ctx.strokeStyle = "#ffffff";
-    // ctx.stroke();
-    // ctx.fillStyle = "#981f28";
-    // ctx.fill();
-
     var i = 0;
     while (i < tkstate.length) {
         var e = 0;
