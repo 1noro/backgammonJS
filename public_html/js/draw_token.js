@@ -86,14 +86,12 @@ function draw_initial_layout(ctx, m) {
         var e = 0;
         while (e < tkstate[i][0]) {
             // tokens negros
-            // ctx.arc(xyTm(vboard[i][e][0], m), xyTm(vboard[i][e][1], m), 10*m-2, 0, 2*Math.PI);
             draw_black_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
             e++;
         }
         e = 0;
         while (e < tkstate[i][1]) {
             // tokens blancos
-            // ctx.arc(xyTm(vboard[i][e][0], m), xyTm(vboard[i][e][1], m), 10*m-2, 0, 2*Math.PI);
             draw_white_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
             e++;
         }
