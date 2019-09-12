@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - La tecla 'Esc' te permite de-seleccionar un pico.
 - Variable con el nivel de 'verbose'.
+- Dados de ambos jugadores.
+### Changed
+- Valores del JS y del CSS para que la adición de los dados no cree scroll ni trastoque la captura del ratón.
 ### Fixed
 - Corregido fallo en el movimiento de las fichas.
 

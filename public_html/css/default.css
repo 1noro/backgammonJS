@@ -12,13 +12,39 @@ a {
 a:visited {
   color: #61adee; }
 
-.margin_top {
-  margin: 20px 0px;
-  font-size: 30px;
-  line-height: 30px; }
+.dices {
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: bold; }
+  .dices span {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    border: 1px solid #aab1be; }
+  .dices #topDice_separator {
+    border: none; }
+  .dices #bottomDice_separator {
+    border: none; }
+
+#topDices {
+  margin-top: 40px;
+  margin-bottom: 20px; }
+
+#bottomDices {
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+.button {
+  color: #aab1be;
+  cursor: pointer; }
+
+.button:hover {
+  color: #ffffff; }
 
 #backgammonCanvas {
-  background-color: green;
-  width: 900px; }
+  width: 750px; }
 
 /*# sourceMappingURL=default.css.map */

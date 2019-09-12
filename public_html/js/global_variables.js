@@ -6,10 +6,11 @@ window.bgjs = {}
 
 // --- GENERIC ----------------------------------------------------------------
 window.bgjs.verbose = 3;
+window.bgjs.m = 2.5; //multiplier
+window.bgjs.canvas_marginTop = 100; //lo que ocupa el <h2> del title
+
 window.bgjs.canvas = 0;
 window.bgjs.ctx = 0;
-window.bgjs.m = 3; //multiplier
-window.bgjs.canvas_marginTop = 70; //lo que ocupa el <h2> del title
 
 // --- GAME -------------------------------------------------------------------
 // colors
@@ -26,6 +27,7 @@ window.bgjs.white_peak_color = "#aab1be";
 window.bgjs.white_peak_selected_color = "#e4e6ea";
 
 // --- GAME STATE -------------------------------------------------------------
+window.bgjs.game_pause = 0;
 window.bgjs.move_state = 0;
 window.bgjs.peak_from = 0;
 window.bgjs.no_peak_selected = false;

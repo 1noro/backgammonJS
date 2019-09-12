@@ -11,6 +11,9 @@ $def_text_color: #aab1be
 $def_a_color: #57b5c1
 $def_a_visited_color: #61adee
 
+$def_button_text_color: #aab1be
+$def_button_text_hover_color: #ffffff
+
 // ----------------------------------------------------------------------------
 body
     margin: 0px
@@ -30,14 +33,48 @@ a:visited
     color: $def_a_visited_color
 
 // ----------------------------------------------------------------------------
-.margin_top
-    margin: 20px 0px
-    font-size: 30px
-    line-height: 30px
+// .margin_top
+//     margin: 20px 0px
+//     font-size: 30px
+//     line-height: 1
+
+// ----------------------------------------------------------------------------
+.dices
+    margin-left: 0px
+    margin-right: 0px
+    font-size: 40px
+    line-height: 1
+    font-weight: bold
+    span
+        padding-top: 5px
+        padding-left: 10px
+        padding-right: 10px
+        padding-bottom: 0px
+        border: 1px solid $def_text_color
+    #topDice_separator
+        border: none
+    #bottomDice_separator
+        border: none
+
+#topDices
+    margin-top: 40px
+    margin-bottom: 20px
+
+#bottomDices
+    margin-top: 20px
+    margin-bottom: 40px
+
+// ----------------------------------------------------------------------------
+.button
+    color: $def_button_text_color
+    cursor: pointer
+
+.button:hover
+    color: $def_button_text_hover_color
 
 // ----------------------------------------------------------------------------
 #backgammonCanvas
     // background-color: #2c3037
-    background-color: green
+    // background-color: green
     // margin-top: 20px
-    width: 900px
+    width: 750px
