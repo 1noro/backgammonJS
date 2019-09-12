@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Implementado el sistema básico de movimiento, con las normas integradas en el.
 - Implementado el sistema de overflow de fichas en un pico.
 - Implementado el sistema de comer fichas desprotegidas.
+- Ajustadas las proporciones del canvas para que el cursor concuerde con el tablero.
 
 ## [20190911a] - 2019-09-11 01:47
 ### Added

@@ -17,9 +17,7 @@ function invC(color) {
 }
 
 function refresh_board() {
-    var
-        bgc = document.getElementById('backgammonCanvas'),
-        ctx = bgc.getContext("2d");
+    var ctx = window.bgjs.ctx;
     draw_board(ctx, window.bgjs.m);
     draw_layout(ctx, window.bgjs.m, window.bgjs.tkstate);
 }
