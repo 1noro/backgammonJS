@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## Alpha
 > by inoro <ssppaamm@protonmail.com>
 
-## 20190912a - 2019-09-12 13:07
+## [20190912a] - 2019-09-12 13:07
 ### Added
 - Archivo JS donde se definan las variables globales.
 - Archivos donde se definirán las funcionalidades básicas del juego.
@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Ahora puedes mostrar los números de los picos, si quieres.
 - Implementado el sistema básico de movimiento, con las normas integradas en el.
 
-## 20190911a - 2019-09-11 01:47
+## [20190911a] - 2019-09-11 01:47
 ### Added
 - El canvas en HTML y el JS que lo dibuja.
 - Utilidades básicas de dibujo para el tablero.
@@ -25,7 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Establecidas las bases para dibujar las fichas en el tablero de una forma fácil.
 - Modo exposición completado.
 
-## 20190910a - 2019-09-10 21:42
+## [20190910a] - 2019-09-10 21:42
 ### Added
 - Todos los archivos base para el proyecto.
 - Documentación básica del proyecto.
