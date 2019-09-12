@@ -19,6 +19,14 @@ window.bgjs.white_stroke_color = "#000000";
 window.bgjs.white_fill_color = "#ffffff";
 window.bgjs.white_text_color = "#000000";
 
+window.bgjs.black_peak_color = "#df6b74";
+window.bgjs.black_peak_selected_color = "blue";
+window.bgjs.white_peak_color = "#aab1be";
+window.bgjs.white_peak_selected_color = "blue";
+
+// --- GAME STATE -------------------------------------------------------------
+window.bgjs.selected_peak = 0;
+
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;
 
