@@ -1,3 +1,5 @@
+// draw_token.js
+// (c) inoro 2019 GPL v3
 
 function draw_black_token(ctx, cx, cy, m, tBw) {
     ctx.beginPath();

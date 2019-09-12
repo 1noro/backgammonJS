@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## Alpha
 > by inoro <ssppaamm@protonmail.com>
 
+## 20190912a - 2019-09-12 13:07
+### Added
+- Archivo JS donde se definan las variables globales.
+### Changed
+- Ya no se define en el main() el multiplicador.
+
 ## 20190911a - 2019-09-11 01:47
 ### Added
 - El canvas en HTML y el JS que lo dibuja.

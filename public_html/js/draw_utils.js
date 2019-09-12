@@ -1,3 +1,5 @@
+// draw_utils.js
+// (c) inoro 2019 GPL v3
 
 function xyT(xypos) {
     return (xypos*(20))+10;
