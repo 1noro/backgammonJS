@@ -6,7 +6,6 @@ function main() {
     var
         bgc = document.getElementById('backgammonCanvas'),
         ctx = bgc.getContext("2d");
-    //     m = 5; //multiplicador
 
     draw_board(ctx, window.bgjs.m);
     draw_initial_layout(ctx, window.bgjs.m);

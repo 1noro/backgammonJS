@@ -38,6 +38,8 @@ window.bgjs.vboard = [
 ]
 
 // --- TOKENS -----------------------------------------------------------------
+window.bgjs.tBw = 6; // token_border_width
+
 // [black, white]
 window.bgjs.tkstate = [
     [5, 0], // 12
