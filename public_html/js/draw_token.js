@@ -5,9 +5,9 @@ function draw_black_token(ctx, cx, cy, m, tBw) {
     ctx.beginPath();
     ctx.arc(cx*m, cy*m, 10*m-(tBw/2), 0, 2*Math.PI);
     ctx.closePath();
-    ctx.strokeStyle = "#ffffff";
+    ctx.strokeStyle = window.bgjs.balck_stroke_color;
     ctx.stroke();
-    ctx.fillStyle = "#981f28";
+    ctx.fillStyle = window.bgjs.balck_fill_color;
     ctx.fill();
 }
 
@@ -15,9 +15,9 @@ function draw_white_token(ctx, cx, cy, m, tBw) {
     ctx.beginPath();
     ctx.arc(cx*m, cy*m, 10*m-(tBw/2), 0, 2*Math.PI);
     ctx.closePath();
-    ctx.strokeStyle = "#000000";
+    ctx.strokeStyle = window.bgjs.white_stroke_color;
     ctx.stroke();
-    ctx.fillStyle = "#ffffff";
+    ctx.fillStyle = window.bgjs.white_fill_color;
     ctx.fill();
 }
 

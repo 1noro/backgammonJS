@@ -7,6 +7,12 @@ window.bgjs = {}
 // --- GENERIC ----------------------------------------------------------------
 window.bgjs.m = 5; //multiplicador
 
+// --- GAME -------------------------------------------------------------------
+window.bgjs.balck_stroke_color = "#ffffff";
+window.bgjs.balck_fill_color = "#981f28";
+window.bgjs.white_stroke_color = "#000000";
+window.bgjs.white_fill_color = "#ffffff";
+
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;
 window.bgjs.game_peaks = [
@@ -44,7 +50,6 @@ window.bgjs.vboard = [
 
 // --- TOKENS -----------------------------------------------------------------
 window.bgjs.tBw = 6; // token_border_width
-
 // [black, white]
 window.bgjs.tkstate = [
     [5, 0], // 12
