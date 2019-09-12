@@ -47,28 +47,5 @@ function draw_layout(ctx, m, tkstate) {
 }
 
 function draw_initial_layout(ctx, m) {
-    var
-        tBw = window.bgjs.tBw, // token_border_width
-        vboard = window.bgjs.vboard,
-        tkstate = window.bgjs.tkstate_initial;
-
-    ctx.lineWidth = tBw;
-
-    var i = 0;
-    while (i < tkstate.length) {
-        var e = 0;
-        while (e < tkstate[i][0]) {
-            // tokens negros
-            draw_black_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
-            e++;
-        }
-        e = 0;
-        while (e < tkstate[i][1]) {
-            // tokens blancos
-            draw_white_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
-            e++;
-        }
-        i++;
-    }
-
+    draw_layout(ctx, m, window.bgjs.tkstate_initial);
 }
