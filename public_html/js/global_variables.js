@@ -5,9 +5,10 @@
 window.bgjs = {}
 
 // --- GENERIC ----------------------------------------------------------------
-window.bgjs.m = 5; //multiplicador
+window.bgjs.m = 5; //multiplier
 
 // --- GAME -------------------------------------------------------------------
+// colors
 window.bgjs.black_stroke_color = "#ffffff";
 window.bgjs.black_fill_color = "#981f28";
 window.bgjs.black_text_color = "#ffffff";
@@ -17,10 +18,12 @@ window.bgjs.white_text_color = "#000000";
 
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;
+
 window.bgjs.game_peaks = [
     12, 13, 11, 14, 10, 15,  9, 16,  8, 17,  7, 18,
      6, 19,  5, 20,  4, 21,  3, 22,  2, 23,  1, 24
 ]
+
 // [(x1, y1), (x2, y2), (x3, y3), (x4, y4), (x5, y5)]
 window.bgjs.vboard = [
     [[ 1,  1], [ 1,  2], [ 1,  3], [ 1, 4], [ 1, 5]], // 12
@@ -52,6 +55,12 @@ window.bgjs.vboard = [
 
 // --- TOKENS -----------------------------------------------------------------
 window.bgjs.tBw = 6; // token_border_width
+
+window.bgjs.black_tokens_taken = 0;
+window.bgjs.black_tokens_out = 0;
+window.bgjs.white_tokens_taken = 0;
+window.bgjs.white_tokens_out = 0;
+
 // [black, white]
 window.bgjs.tkstate = [
     [5, 0], // 12
