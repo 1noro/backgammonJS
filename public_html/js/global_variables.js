@@ -8,6 +8,7 @@ window.bgjs = {}
 window.bgjs.m = 5; //multiplicador
 
 // --- BORAD ------------------------------------------------------------------
+window.bgjs.draw_numbers = true;
 window.bgjs.game_peaks = [
     12, 13, 11, 14, 10, 15,  9, 16,  8, 17,  7, 18,
      6, 19,  5, 20,  4, 21,  3, 22,  2, 23,  1, 24
