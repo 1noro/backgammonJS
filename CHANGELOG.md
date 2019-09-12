@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## 20190912a - 2019-09-12 13:07
 ### Added
 - Archivo JS donde se definan las variables globales.
+- Archivos donde se definirán las funcionalidades básicas del juego.
 ### Changed
 - Ya no se define en el main() el multiplicador.
 - Formas de dibujar el layout.
