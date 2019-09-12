@@ -17,14 +17,3 @@ function get_cursor(e) {
         cursorY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
     console.log('[CLIC] x: '+cursorX+', y: '+cursorY);
 }
-
-function get_cursor_rel(e) {
-    var
-        cursorX = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft),
-        cursorY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-    // console.log('[CLIC] rel_x: '+(cursorX-get_canvas_start_point().x)+', rel_y: '+(cursorY-get_canvas_start_point().y));
-    cursorX_rel = cursorX-get_canvas_start_point().x;
-    cursorY_rel = cursorY-get_canvas_start_point().y;
-    console.log('[CLIC] cursorX_rel: '+cursorX_rel+', cursorY_rel: '+cursorY_rel);
-    check_peak(cursorX_rel, cursorY_rel);
-}

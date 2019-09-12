@@ -12,13 +12,6 @@ function draw_peak(ctx, m, color, x1, y1, x2, y2, x3, y3) {
 }
 
 function draw_top_peak(ctx, m, rojo, px) {
-    // ctx.beginPath();
-    // ctx.moveTo(px*m, 20*m);
-    // rojo?ctx.lineTo((px+10)*m, 120*m):ctx.lineTo((px+10)*m, 110*m);
-    // ctx.lineTo((px+20)*m, 20*m);
-    // ctx.closePath();
-    // rojo?ctx.fillStyle = window.bgjs.black_peak_color:ctx.fillStyle = window.bgjs.white_peak_color;
-    // ctx.fill();
     if (rojo) {draw_peak(ctx, m, window.bgjs.black_peak_color, px, 20, px+10, 120, px+20, 20);}
     else {draw_peak(ctx, m, window.bgjs.white_peak_color, px, 20, px+10, 110, px+20, 20);}
 }
@@ -29,13 +22,6 @@ function draw_top_peak_selected(ctx, m, rojo, px) {
 }
 
 function draw_bottom_peak(ctx, m, rojo, px) {
-    // ctx.beginPath();
-    // ctx.moveTo(px*m, 260*m);
-    // rojo?ctx.lineTo((px+10)*m, 160*m):ctx.lineTo((px+10)*m, 150*m);
-    // ctx.lineTo((px+20)*m, 260*m);
-    // ctx.closePath();
-    // rojo?ctx.fillStyle = window.bgjs.white_peak_color:ctx.fillStyle = window.bgjs.black_peak_color;
-    // ctx.fill();
     if (rojo) {draw_peak(ctx, m, window.bgjs.white_peak_color, px, 260, px+10, 160, px+20, 260);}
     else {draw_peak(ctx, m, window.bgjs.black_peak_color, px, 260, px+10, 150, px+20, 260);}
 }
@@ -73,19 +59,15 @@ function draw_board(ctx, m) {
     var px = 20;
     var peak_number = 0;
     var game_peaks = window.bgjs.game_peaks;
+    var peak_from = window.bgjs.peak_from;
     while (mitad <= 2) {
         var pico = 1;
         while (pico <= 6) {
-            // console.log('pico: '+pico);
-            // console.log('game_peaks[peak_number]: '+game_peaks[peak_number]);
-            // console.log('game_peaks[peak_number+1]: '+game_peaks[peak_number+1]);
-            // draw_top_peak(ctx, m, rojo, px);
-            // draw_bottom_peak(ctx, m, rojo, px);
 
-            if (game_peaks[peak_number] == window.bgjs.selected_peak) {
+            if (game_peaks[peak_number] == peak_from) {
                 draw_top_peak_selected(ctx, m, rojo, px);
                 draw_bottom_peak(ctx, m, rojo, px);
-            } else if (game_peaks[peak_number+1] == window.bgjs.selected_peak) {
+            } else if (game_peaks[peak_number+1] == peak_from) {
                 draw_bottom_peak_selected(ctx, m, rojo, px);
                 draw_top_peak(ctx, m, rojo, px);
             } else {

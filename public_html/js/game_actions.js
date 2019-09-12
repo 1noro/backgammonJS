@@ -27,3 +27,25 @@ function move_from_to(color, from, to) {
         console.log('[FAIL] Movimiento no permitido para este color.');
     }
 }
+
+function move_states(peak) {
+    if (window.bgjs.move_state == 0) {
+        window.bgjs.peak_from = peak;
+        refresh_board();
+        console.log('[SELE] Pico '+peak+' seleccionado.');
+        window.bgjs.move_state = 1;
+    } else if (window.bgjs.move_state == 1) {
+
+        var
+            from = window.bgjs.peak_from,
+            to = peak;
+            color = get_peak_color(from);
+
+        // reset
+        window.bgjs.move_state = 0;
+        window.bgjs.peak_from = 0;
+
+        move_from_to(color, from, to);
+        console.log('[MOVE] Movido 1 token del color '+color+' desde '+peak+' hasta '+to+'.');
+    }
+}

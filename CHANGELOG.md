@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Implementado el sistema de comer fichas desprotegidas.
 - Ajustadas las proporciones del canvas para que el cursor concuerde con el tablero.
 - Ahora el pico cambia de color cuando se selecciona con el ratón.
+- Se pueden mover los tokens con el ratón.
 
 ## [20190911a] - 2019-09-11 01:47
 ### Added

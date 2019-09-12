@@ -38,3 +38,19 @@ function check_color_mov(color, from, to) {
     }
     return out;
 }
+
+function get_peak_color(real_peak) {
+    var
+        tkstate = window.bgjs.tkstate,
+        game_peak = n2game(real_peak);
+
+    if (tkstate[game_peak][0] == 0 && tkstate[game_peak][1] != 0) {
+        return 1;
+    } else if (tkstate[game_peak][1] == 0 && tkstate[game_peak][0] != 0) {
+        return 0;
+    } else if (tkstate[game_peak][1] == 0 && tkstate[game_peak][0] == 0) {
+        console.log('[FAIL] En el pico '+real_peak+'('+game_peak+') está vacío, por lo tanto no tiene color.');
+    } else {
+        console.log('[FAIL] En el pico '+real_peak+'('+game_peak+') hay tokens de 2 colores diferentes: black: '+tkstate[game_peak][0]+', white: '+tkstate[game_peak][0]+'.');
+    }
+}
