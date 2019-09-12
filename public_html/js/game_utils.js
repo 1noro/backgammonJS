@@ -39,6 +39,17 @@ function check_color_mov(color, from, to) {
     return out;
 }
 
+function is_peak_empty(real_peak) {
+    var
+        out = true,
+        tkstate = window.bgjs.tkstate,
+        game_peak = n2game(real_peak);
+    if (tkstate[game_peak][0] > 0 || tkstate[game_peak][1] > 0) {
+        out = false;
+    }
+    return out;
+}
+
 function get_peak_color(real_peak) {
     var
         tkstate = window.bgjs.tkstate,

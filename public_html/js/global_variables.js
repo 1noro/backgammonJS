@@ -20,9 +20,9 @@ window.bgjs.white_fill_color = "#ffffff";
 window.bgjs.white_text_color = "#000000";
 
 window.bgjs.black_peak_color = "#df6b74";
-window.bgjs.black_peak_selected_color = "blue";
+window.bgjs.black_peak_selected_color = "#f1bfc3";
 window.bgjs.white_peak_color = "#aab1be";
-window.bgjs.white_peak_selected_color = "blue";
+window.bgjs.white_peak_selected_color = "#e4e6ea";
 
 // --- GAME STATE -------------------------------------------------------------
 window.bgjs.move_state = 0;
