@@ -15,7 +15,9 @@ function check_peak(cursorX, cursorY) {
         ) {
             // console.log('[INFO] Pulsaste en el pico: '+game_peaks[i]+', i:'+i);
             // console.log('[INFO] Pulsaste en el pico: '+game_peaks[i]);
+            window.bgjs.no_peak_selected = true;
             move_states(game_peaks[i]);
+            break;
         }
         i++;
     }

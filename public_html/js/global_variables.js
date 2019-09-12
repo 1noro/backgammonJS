@@ -26,9 +26,8 @@ window.bgjs.white_peak_selected_color = "#e4e6ea";
 
 // --- GAME STATE -------------------------------------------------------------
 window.bgjs.move_state = 0;
-// window.bgjs.selected_color = 0;
 window.bgjs.peak_from = 0;
-// window.bgjs.peak_to = 0;
+window.bgjs.no_peak_selected = false;
 
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;

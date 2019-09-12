@@ -65,3 +65,8 @@ function get_peak_color(real_peak) {
         console.log('[FAIL] En el pico '+real_peak+'('+game_peak+') hay tokens de 2 colores diferentes: black: '+tkstate[game_peak][0]+', white: '+tkstate[game_peak][0]+'.');
     }
 }
+
+function reset_move_states() {
+    window.bgjs.move_state = 0;
+    window.bgjs.peak_from = 0;
+}

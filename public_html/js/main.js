@@ -13,8 +13,6 @@ function main() {
     draw_board(ctx, window.bgjs.m);
     draw_initial_layout(ctx, window.bgjs.m);
 
-    // if (window.Event) {document.captureEvents(Event.MOUSEMOVE);}
-	// document.onmousemove = get_cursor_xy;
-    // if (window.Event) {document.captureEvents(Event.MOUSEDOWN);}
+	document.onkeydown = get_key;
 	document.onmousedown = get_cursor_rel;
 }
