@@ -5,6 +5,7 @@
 window.bgjs = {}
 
 // --- GENERIC ----------------------------------------------------------------
+window.bgjs.verbose = 3;
 window.bgjs.canvas = 0;
 window.bgjs.ctx = 0;
 window.bgjs.m = 3; //multiplier

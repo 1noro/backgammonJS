@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [20190912b] - 2019-09-12 22:16
 ### Added
 - La tecla 'Esc' te permite de-seleccionar un pico.
+- Variable con el nivel de 'verbose'.
 ### Fixed
 - Corregido fallo en el movimiento de las fichas.
 
