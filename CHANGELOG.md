@@ -15,6 +15,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Formas de dibujar el layout.
 - Ahora puedes mostrar los números de los picos, si quieres.
 - Implementado el sistema básico de movimiento, con las normas integradas en el.
+- Implementado el sistema de overflow de fichas en un pico.
+- Implementado el sistema de comer fichas desprotegidas.
 
 ## [20190911a] - 2019-09-11 01:47
 ### Added

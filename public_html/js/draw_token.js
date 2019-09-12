@@ -5,9 +5,9 @@ function draw_black_token(ctx, cx, cy, m, tBw) {
     ctx.beginPath();
     ctx.arc(cx*m, cy*m, 10*m-(tBw/2), 0, 2*Math.PI);
     ctx.closePath();
-    ctx.strokeStyle = window.bgjs.balck_stroke_color;
+    ctx.strokeStyle = window.bgjs.black_stroke_color;
     ctx.stroke();
-    ctx.fillStyle = window.bgjs.balck_fill_color;
+    ctx.fillStyle = window.bgjs.black_fill_color;
     ctx.fill();
 }
 
@@ -26,22 +26,49 @@ function draw_layout(ctx, m, tkstate) {
         tBw = window.bgjs.tBw, // token_border_width
         vboard = window.bgjs.vboard;
 
+    // TOKEN STYLE
     ctx.lineWidth = tBw;
+
+    // TEXT STYLE
+    ctx.font = (10*m)+"px My Courier New";
+    ctx.textAlign = "center";
 
     var i = 0;
     while (i < tkstate.length) {
         var e = 0;
+        var overflow = false;
         while (e < tkstate[i][0]) {
             // tokens negros
+            if (e > 4) { // normas
+                overflow = true;
+                break;
+            }
             draw_black_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
             e++;
         }
+        if (overflow) {
+            last_e = 4;
+            ctx.fillStyle = window.bgjs.black_text_color;
+            ctx.fillText(tkstate[i][0], xyT(vboard[i][last_e][0])*m, (xyT(vboard[i][last_e][1])+3.2)*m);
+        }
+
         e = 0;
+        overflow = false;
         while (e < tkstate[i][1]) {
             // tokens blancos
+            if (e > 4) { // normas
+                overflow = true;
+                break;
+            }
             draw_white_token(ctx, xyT(vboard[i][e][0]), xyT(vboard[i][e][1]), m, tBw);
             e++;
         }
+        if (overflow) {
+            last_e = 4;
+            ctx.fillStyle = window.bgjs.white_text_color;
+            ctx.fillText(tkstate[i][1], xyT(vboard[i][last_e][0])*m, (xyT(vboard[i][last_e][1])+3.2)*m);
+        }
+
         i++;
     }
 }

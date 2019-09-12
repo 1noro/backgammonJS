@@ -8,10 +8,12 @@ window.bgjs = {}
 window.bgjs.m = 5; //multiplicador
 
 // --- GAME -------------------------------------------------------------------
-window.bgjs.balck_stroke_color = "#ffffff";
-window.bgjs.balck_fill_color = "#981f28";
+window.bgjs.black_stroke_color = "#ffffff";
+window.bgjs.black_fill_color = "#981f28";
+window.bgjs.black_text_color = "#ffffff";
 window.bgjs.white_stroke_color = "#000000";
 window.bgjs.white_fill_color = "#ffffff";
+window.bgjs.white_text_color = "#000000";
 
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;

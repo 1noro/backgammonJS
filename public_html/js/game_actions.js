@@ -6,10 +6,16 @@ function move_from_to(color, from, to) {
     if (check_color_mov(color, from, to)) {
         var tkstate = window.bgjs.tkstate;
         if (tkstate[n2game(from)][color] > 0) {
-            if (tkstate[n2game(to)][invC(color)] <= 1) {
-                console.log('Ok, había '+(tkstate[n2game(from)][color])+' y ahora hay '+(tkstate[n2game(from)][color]-1));
+            if (tkstate[n2game(to)][invC(color)] == 1) {
+                tkstate[n2game(to)][invC(color)]--;
                 tkstate[n2game(from)][color]--;
                 tkstate[n2game(to)][color]++;
+                console.log('[TAKE] color: '+color+', from: '+from+'('+tkstate[n2game(from)][color]+') >> to: '+to+'('+tkstate[n2game(to)][color]+')');
+                refresh_board();
+            } else if (tkstate[n2game(to)][invC(color)] <= 1) {
+                tkstate[n2game(from)][color]--;
+                tkstate[n2game(to)][color]++;
+                console.log('[MOVE] color: '+color+', from: '+from+'('+tkstate[n2game(from)][color]+') >> to: '+to+'('+tkstate[n2game(to)][color]+')');
                 refresh_board();
             } else {
                 console.log('[FAIL] Hay más de 1 ficha del color "'+invC(color)+'" en el pico de destino.');

@@ -24,6 +24,7 @@ function refresh_board() {
     draw_layout(ctx, window.bgjs.m, window.bgjs.tkstate);
 }
 
+// forma parte de las normas
 function check_color_mov(color, from, to) {
     var out = false;
     if (!color) {
