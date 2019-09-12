@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - Archivo JS donde se definan las variables globales.
 - Archivos donde se definirán las funcionalidades básicas del juego.
+- Funcionalidades básicas de captura del ratón.
 ### Changed
 - Ya no se define en el main() el multiplicador.
 - Formas de dibujar el layout.

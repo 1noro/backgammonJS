@@ -12,7 +12,13 @@ a {
 a:visited {
   color: #61adee; }
 
+.margin_top {
+  margin: 20px 0px;
+  font-size: 30px;
+  line-height: 30px; }
+
 #backgammonCanvas {
+  background-color: green;
   width: 900px; }
 
 /*# sourceMappingURL=default.css.map */
