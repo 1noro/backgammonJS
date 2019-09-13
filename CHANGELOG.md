@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 > by inoro <ssppaamm@protonmail.com>
 
 ## [20190913b] - 2019-09-13 20:15
+### Added
+- Nueva forma de determinar los colores.
 ### Changed
 - Ahora se puede seleccionar visualmente las fichas comidas de ambos jugadores.
 - Todas las variables "black" ahora se llaman "top".

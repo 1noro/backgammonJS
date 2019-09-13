@@ -13,23 +13,73 @@ window.bgjs.canvas = 0;
 window.bgjs.ctx = 0;
 
 // --- GAME -------------------------------------------------------------------
-// colors
+// avaliable colors
+window.bgjs.black = {
+    stroke_color: "#ffffff",
+    fill_color: "#000000",
+    text_color: "#ffffff",
+
+    peak_color: "#000000",
+    peak_selected_color: "#000000",
+
+    tokens_taked_selected_color: "#434953"
+}
+
+window.bgjs.white = {
+    stroke_color: "#000000",
+    fill_color: "#ffffff",
+    text_color: "#000000",
+
+    peak_color: "#aab1be",
+    peak_selected_color: "#e4e6ea",
+
+    tokens_taked_selected_color: "#434953"
+}
+
+window.bgjs.red = {
+    stroke_color: "#ffffff",
+    fill_color: "#981f28",
+    text_color: "#ffffff",
+
+    peak_color: "#df6b74",
+    peak_selected_color: "#f1bfc3",
+
+    tokens_taked_selected_color: "#434953"
+}
+
+window.bgjs.blue = {
+    stroke_color: "#ffffff",
+    fill_color: "blue",
+    text_color: "#ffffff",
+
+    peak_color: "blue",
+    peak_selected_color: "#ffffff",
+
+    tokens_taked_selected_color: "#434953"
+}
+
+// assigned colors
 window.bgjs.bg_color = "#262a2f";
 
-window.bgjs.top_stroke_color = "#ffffff";
-window.bgjs.top_fill_color = "#981f28";
-window.bgjs.top_text_color = "#ffffff";
-window.bgjs.bottom_stroke_color = "#000000";
-window.bgjs.bottom_fill_color = "#ffffff";
-window.bgjs.bottom_text_color = "#000000";
+// --- top
+window.bgjs.top_stroke_color = window.bgjs.red.stroke_color;
+window.bgjs.top_fill_color = window.bgjs.red.fill_color;
+window.bgjs.top_text_color = window.bgjs.red.text_color;
 
-window.bgjs.top_peak_color = "#df6b74";
-window.bgjs.top_peak_selected_color = "#f1bfc3";
-window.bgjs.bottom_peak_color = "#aab1be";
-window.bgjs.bottom_peak_selected_color = "#e4e6ea";
+window.bgjs.top_peak_color = window.bgjs.red.peak_color;
+window.bgjs.top_peak_selected_color = window.bgjs.red.peak_selected_color;
 
-window.bgjs.top_tokens_taked_selected_color = "#434953";
-window.bgjs.bottom_tokens_taked_selected_color = "#434953";
+window.bgjs.top_tokens_taked_selected_color = window.bgjs.red.tokens_taked_selected_color;
+
+// --- bottom
+window.bgjs.bottom_stroke_color = window.bgjs.white.stroke_color;
+window.bgjs.bottom_fill_color = window.bgjs.white.fill_color;
+window.bgjs.bottom_text_color = window.bgjs.white.text_color;
+
+window.bgjs.bottom_peak_color = window.bgjs.white.peak_color;
+window.bgjs.bottom_peak_selected_color = window.bgjs.white.peak_selected_color;
+
+window.bgjs.bottom_tokens_taked_selected_color = window.bgjs.white.tokens_taked_selected_color;
 
 // --- GAME STATE -------------------------------------------------------------
 window.bgjs.game_pause = 0;
