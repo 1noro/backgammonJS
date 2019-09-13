@@ -37,6 +37,10 @@ a:visited {
   margin-top: 20px;
   margin-bottom: 40px; }
 
+.actual_dice {
+  color: #262a2f;
+  background-color: #aab1be; }
+
 .button {
   color: #aab1be;
   cursor: pointer; }
