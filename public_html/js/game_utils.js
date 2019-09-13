@@ -25,19 +25,8 @@ function refresh_board() {
 // forma parte de las normas
 function check_color_mov(color, from, to) {
     var out = false;
-    if (!color) {
-        // the top color only moves increasingly (-->)
-        // if (from < to) {
-        //     out = true;
-        // }
-        out = (from < to)?true:false;
-    } else {
-        // the bottom color only moves decreasingly (<--)
-        // if (from > to) {
-        //     out = true;
-        // }
-        out = (from > to)?true:false;
-    }
+    if (!color) {out = (from < to)?true:false;}
+        else {out = (from > to)?true:false;}
     return out;
 }
 
@@ -52,7 +41,7 @@ function is_peak_empty(real_peak) {
     return out;
 }
 
-function get_peak_color(real_peak) {
+function check_peak_ownership(real_peak) {
     var
         tkstate = window.bgjs.tkstate,
         game_peak = n2game(real_peak);
@@ -78,16 +67,11 @@ function reset_pkmove_states() {
 
 function is_the_peak_back(color, from, to) {
     var out = false;
-    if (color == 0) {
-        // top
-        out = (from > to)?true:false;
-    } else {
-        // bottom
-        out = (from < to)?true:false;
-    }
+    if (color == 0) {out = (from > to)?true:false;}
+        else {out = (from < to)?true:false;}
     return out;
 }
 
-function is_same_color(color, to) {
-    return (color == get_peak_color(to));
+function is_same_owner(color, to) {
+    return (color == check_peak_ownership(to));
 }

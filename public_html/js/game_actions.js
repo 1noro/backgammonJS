@@ -39,7 +39,7 @@ function pkmove_states(peak) {
         var
             from = window.bgjs.peak_from,
             to = peak,
-            color = get_peak_color(from);
+            color = check_peak_ownership(from);
 
         if (check_color_mov(color, from, to)) {
             var tkstate = window.bgjs.tkstate;
@@ -57,7 +57,7 @@ function pkmove_states(peak) {
                 reset_pkmove_states();
                 console.log('[INFO] Seleccionado como destino un pico vacío anterior, se desselecciona todo.');
                 refresh_board();
-            } else if (is_same_color(color, to)) {
+            } else if (is_same_owner(color, to)) {
                 window.bgjs.peak_from = to;
                 refresh_board();
                 console.log('[SELE] Pico '+to+' seleccionado.');
