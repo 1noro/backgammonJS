@@ -6,7 +6,11 @@ function check_peak(cursorX, cursorY) {
         ctx = window.bgjs.ctx,
         game_peaks = window.bgjs.game_peaks,
         vpeak = window.bgjs.vpeak,
-        m = window.bgjs.m;
+        m = window.bgjs.m,
+        bttb = window.bgjs.black_tokens_taked_box,
+        wttb = window.bgjs.white_tokens_taked_box;
+
+    // Pulsando sobre los picos
     var i = 0;
     while (i < vpeak.length) {
         if (
@@ -21,6 +25,27 @@ function check_peak(cursorX, cursorY) {
         }
         i++;
     }
+
+    // Pulsando sobre las fichas comidas
+    if (window.bgjs.black_tokens_taked > 0) {
+        if (
+            (cursorX >= bttb[0][0]*m && cursorX <= bttb[1][0]*m) &&
+            (cursorY >= bttb[0][1]*m && cursorY <= bttb[1][1]*m)
+        ) {
+            console.log('[INFO] Seleccionados los tokens comidos del ugador negro.');
+        }
+    }
+    if (window.bgjs.white_tokens_taked > 0) {
+        if (
+            (cursorX >= wttb[0][0]*m && cursorX <= wttb[1][0]*m) &&
+            (cursorY >= wttb[0][1]*m && cursorY <= wttb[1][1]*m)
+        ) {
+            console.log('[INFO] Seleccionados los tokens comidos del ugador blanco.');
+        }
+    }
+
+    // Pulsando sobre la salida de fichas
+    // no implementado
 }
 
 function get_cursor_rel(e) {

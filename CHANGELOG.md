@@ -7,9 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 > by inoro <ssppaamm@protonmail.com>
 
 ## [20190913a] - 2019-09-13 11:15
+### Added
+- Agregada las funcionalidades que muestran en pantalla las fichas comidas de ambos jugadores.
 ### Changed
 - Ahora si seleccionas un pico previo en tu color no salta error, sino que se selecciona.
 - Cambiado el estilo de los dados cuando están en juego.
+- Detectado cuando pulsas con el ratón sobre las fichas comidas.
 ### Fixed
 - Pequeño bug al seleccionar picos vacíos.
 

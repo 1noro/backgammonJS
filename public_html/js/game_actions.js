@@ -16,6 +16,11 @@ function simple_move_from_to_take(color, from, to) {
     tkstate[n2game(to)][invC(color)]--;
     tkstate[n2game(from)][color]--;
     tkstate[n2game(to)][color]++;
+    if (color == 0) {
+        window.bgjs.white_tokens_taked++;
+    } else {
+        window.bgjs.black_tokens_taked++;
+    }
     console.log('[TAKE] color: '+color+', from: '+from+'('+tkstate[n2game(from)][color]+') >> to: '+to+'('+tkstate[n2game(to)][color]+')');
     refresh_board();
 }

@@ -32,6 +32,15 @@ window.bgjs.move_state = 0;
 window.bgjs.peak_from = 0;
 window.bgjs.no_peak_selected = false;
 
+window.bgjs.doubling_cube = true;
+window.bgjs.doubling_cube_state = 64;
+
+// valores provisionales
+window.bgjs.black_tokens_out = 1;
+window.bgjs.white_tokens_out = 2;
+window.bgjs.black_tokens_taked = 0;
+window.bgjs.white_tokens_taked = 0;
+
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;
 
@@ -99,6 +108,10 @@ window.bgjs.vpeak = [
     [[260,  20], [280, 130]], // 01
     [[260, 150], [280, 260]], // 24
 ]
+
+// [(x1, y1), (x2, y2)]
+window.bgjs.black_tokens_taked_box = [[140, 110], [160, 130]];
+window.bgjs.white_tokens_taked_box = [[140, 150], [160, 170]];
 
 // --- TOKENS -----------------------------------------------------------------
 window.bgjs.tBw = 6; // token_border_width

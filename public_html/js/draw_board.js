@@ -88,6 +88,13 @@ function draw_board(ctx, m) {
             pico++;
             peak_number+=2;
         }
+
+        // <test>
+        // ctx.fillStyle = "blue";
+        // ctx.fillRect(140*m, 110*m, 20*m, 20*m);
+        // ctx.fillRect(140*m, 150*m, 20*m, 20*m);
+        // </test>
+
         px+=20;
         mitad++;
     }
