@@ -32,8 +32,8 @@ function draw_bottom_peak_selected(ctx, m, rojo, px) {
 }
 
 function draw_board(ctx, m) {
-    // ctx.strokeStyle = "#ffffff";
-    // ctx.lineWidth = 5;
+    // FONDO
+    reset_canvas_with_bg_color(ctx, m);
 
     // BORDES
     // ctx.fillStyle = "#2c3037";
@@ -94,6 +94,16 @@ function draw_board(ctx, m) {
         // ctx.fillRect(140*m, 110*m, 20*m, 20*m);
         // ctx.fillRect(140*m, 150*m, 20*m, 20*m);
         // </test>
+
+        if (window.bgjs.black_tokens_taked_selected) {
+            ctx.fillStyle = window.bgjs.black_tokens_taked_selected_color ;
+            ctx.fillRect(140*m, 110*m, 20*m, 20*m);
+        }
+
+        if (window.bgjs.white_tokens_taked_selected) {
+            ctx.fillStyle = window.bgjs.white_tokens_taked_selected_color;
+            ctx.fillRect(140*m, 150*m, 20*m, 20*m);
+        }
 
         px+=20;
         mitad++;

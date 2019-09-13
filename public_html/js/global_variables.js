@@ -14,6 +14,8 @@ window.bgjs.ctx = 0;
 
 // --- GAME -------------------------------------------------------------------
 // colors
+window.bgjs.bg_color = "#262a2f";
+
 window.bgjs.black_stroke_color = "#ffffff";
 window.bgjs.black_fill_color = "#981f28";
 window.bgjs.black_text_color = "#ffffff";
@@ -25,6 +27,9 @@ window.bgjs.black_peak_color = "#df6b74";
 window.bgjs.black_peak_selected_color = "#f1bfc3";
 window.bgjs.white_peak_color = "#aab1be";
 window.bgjs.white_peak_selected_color = "#e4e6ea";
+
+window.bgjs.black_tokens_taked_selected_color = "#434953";
+window.bgjs.white_tokens_taked_selected_color = "#434953";
 
 // --- GAME STATE -------------------------------------------------------------
 window.bgjs.game_pause = 0;
@@ -40,6 +45,8 @@ window.bgjs.black_tokens_out = 1;
 window.bgjs.white_tokens_out = 2;
 window.bgjs.black_tokens_taked = 0;
 window.bgjs.white_tokens_taked = 0;
+window.bgjs.black_tokens_taked_selected = false;
+window.bgjs.white_tokens_taked_selected = false;
 
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;

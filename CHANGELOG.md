@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## Alpha
 > by inoro <ssppaamm@protonmail.com>
 
+## [20190913b] - 2019-09-13 20:15
+### Changed
+- Ahora se puede seleccionar visualmente las fichas comidas de ambos jugadores.
+
 ## [20190913a] - 2019-09-13 11:15
 ### Added
 - Agregada las funcionalidades que muestran en pantalla las fichas comidas de ambos jugadores.

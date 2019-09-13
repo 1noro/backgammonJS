@@ -71,6 +71,9 @@ function get_peak_color(real_peak) {
 function reset_move_states() {
     window.bgjs.move_state = 0;
     window.bgjs.peak_from = 0;
+
+    window.bgjs.black_tokens_taked_selected = false;
+    window.bgjs.white_tokens_taked_selected = false;
 }
 
 function is_the_peak_back(color, from, to) {

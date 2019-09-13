@@ -10,3 +10,8 @@ function xyT(xypos) {
 function xyTm(xypos, m) {
     return (xypos*(20*m))+10*m;
 }
+
+function reset_canvas_with_bg_color(ctx, m) {
+    ctx.fillStyle = window.bgjs.bg_color;
+    ctx.fillRect(0*m, 0*m, 300*m, 280*m);
+}

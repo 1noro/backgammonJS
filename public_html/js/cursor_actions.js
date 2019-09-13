@@ -32,7 +32,9 @@ function check_peak(cursorX, cursorY) {
             (cursorX >= bttb[0][0]*m && cursorX <= bttb[1][0]*m) &&
             (cursorY >= bttb[0][1]*m && cursorY <= bttb[1][1]*m)
         ) {
-            console.log('[INFO] Seleccionados los tokens comidos del ugador negro.');
+            console.log('[INFO] Seleccionados los tokens comidos del jugador negro.');
+            window.bgjs.black_tokens_taked_selected = true;
+            refresh_board();
         }
     }
     if (window.bgjs.white_tokens_taked > 0) {
@@ -40,7 +42,9 @@ function check_peak(cursorX, cursorY) {
             (cursorX >= wttb[0][0]*m && cursorX <= wttb[1][0]*m) &&
             (cursorY >= wttb[0][1]*m && cursorY <= wttb[1][1]*m)
         ) {
-            console.log('[INFO] Seleccionados los tokens comidos del ugador blanco.');
+            console.log('[INFO] Seleccionados los tokens comidos del jugador blanco.');
+            window.bgjs.white_tokens_taked_selected = true;
+            refresh_board();
         }
     }
 
