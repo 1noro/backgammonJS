@@ -13,7 +13,7 @@ function simple_move_from_to_empty(color, from, to) {
 // color: top (0), bottom (1)
 function simple_move_from_to_take(color, from, to) {
     var tkstate = window.bgjs.tkstate;
-    tkstate[n2game(to)][invC(color)]--;
+    tkstate[n2game(to)][invO(color)]--;
     tkstate[n2game(from)][color]--;
     tkstate[n2game(to)][color]++;
     if (color == 0) {
@@ -41,16 +41,16 @@ function pkmove_states(peak) {
             to = peak,
             color = check_peak_ownership(from);
 
-        if (check_color_mov(color, from, to)) {
+        if (check_owner_mov(color, from, to)) {
             var tkstate = window.bgjs.tkstate;
-            if (tkstate[n2game(to)][invC(color)] == 1) {
+            if (tkstate[n2game(to)][invO(color)] == 1) {
                 reset_pkmove_states();
                 simple_move_from_to_take(color, from, to);
-            } else if (tkstate[n2game(to)][invC(color)] <= 1) {
+            } else if (tkstate[n2game(to)][invO(color)] <= 1) {
                 reset_pkmove_states();
                 simple_move_from_to_empty(color, from, to);
             } else {
-                console.log('[NONE] Hay más de 1 ficha del color "'+invC(color)+'" en el pico de destino.');
+                console.log('[NONE] Hay más de 1 ficha del color "'+invO(color)+'" en el pico de destino.');
             }
         } else {
             if (is_peak_empty(to)) {
