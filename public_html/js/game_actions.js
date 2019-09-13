@@ -48,7 +48,13 @@ function move_states(peak) {
                 console.log('[FAIL] Hay más de 1 ficha del color "'+invC(color)+'" en el pico de destino.');
             }
         } else {
-            console.log('[FAIL] Movimiento no permitido para este color.');
+            if (is_same_color(color, to)) {
+                window.bgjs.peak_from = to;
+                refresh_board();
+                console.log('[SELE] Pico '+to+' seleccionado.');
+            } else {
+                console.log('[FAIL] Movimiento no permitido para este color.');
+            }
         }
     }
 }

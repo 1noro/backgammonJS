@@ -27,14 +27,16 @@ function check_color_mov(color, from, to) {
     var out = false;
     if (!color) {
         // the black color only moves increasingly (-->)
-        if (from < to) {
-            out = true;
-        }
+        // if (from < to) {
+        //     out = true;
+        // }
+        out = (from < to)?true:false;
     } else {
         // the white color only moves decreasingly (<--)
-        if (from > to) {
-            out = true;
-        }
+        // if (from > to) {
+        //     out = true;
+        // }
+        out = (from > to)?true:false;
     }
     return out;
 }
@@ -69,4 +71,20 @@ function get_peak_color(real_peak) {
 function reset_move_states() {
     window.bgjs.move_state = 0;
     window.bgjs.peak_from = 0;
+}
+
+function is_the_peak_back(color, from, to) {
+    var out = false;
+    if (color == 0) {
+        // black
+        out = (from > to)?true:false;
+    } else {
+        // white
+        out = (from < to)?true:false;
+    }
+    return out;
+}
+
+function is_same_color(color, to) {
+    return (color == get_peak_color(to));
 }

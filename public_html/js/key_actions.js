@@ -5,5 +5,6 @@ function get_key(e) {
     if(e.key === "Escape") {
         reset_move_states();
         refresh_board();
+        console.log('[PKEY] Presionada la tecla "Esc", se limpian todas las selecciones.');
     }
 }
