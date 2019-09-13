@@ -68,7 +68,7 @@ function get_peak_color(real_peak) {
     }
 }
 
-function reset_move_states() {
+function reset_pkmove_states() {
     window.bgjs.move_state = 0;
     window.bgjs.peak_from = 0;
 

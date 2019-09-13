@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Todas las variables "black" ahora se llaman "top".
 - Todas las variables "white" ahora se llaman "bottom".
 - Todas las variables "rojo" ahora se llaman "top_color".
+- Todas las funciones que contenían "move_states" en su nombre, ahora contienen "pkmove_states".
 
 ## [20190913a] - 2019-09-13 11:15
 ### Added

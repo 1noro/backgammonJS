@@ -25,7 +25,7 @@ function simple_move_from_to_take(color, from, to) {
     refresh_board();
 }
 
-function move_states(peak) {
+function pkmove_states(peak) {
     if (window.bgjs.move_state == 0) {
         if (!is_peak_empty(peak)) {
             window.bgjs.peak_from = peak;
@@ -44,17 +44,17 @@ function move_states(peak) {
         if (check_color_mov(color, from, to)) {
             var tkstate = window.bgjs.tkstate;
             if (tkstate[n2game(to)][invC(color)] == 1) {
-                reset_move_states();
+                reset_pkmove_states();
                 simple_move_from_to_take(color, from, to);
             } else if (tkstate[n2game(to)][invC(color)] <= 1) {
-                reset_move_states();
+                reset_pkmove_states();
                 simple_move_from_to_empty(color, from, to);
             } else {
                 console.log('[NONE] Hay más de 1 ficha del color "'+invC(color)+'" en el pico de destino.');
             }
         } else {
             if (is_peak_empty(to)) {
-                reset_move_states();
+                reset_pkmove_states();
                 console.log('[INFO] Seleccionado como destino un pico vacío anterior, se desselecciona todo.');
                 refresh_board();
             } else if (is_same_color(color, to)) {
