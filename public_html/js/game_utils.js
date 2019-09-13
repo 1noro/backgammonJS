@@ -26,13 +26,13 @@ function refresh_board() {
 function check_color_mov(color, from, to) {
     var out = false;
     if (!color) {
-        // the black color only moves increasingly (-->)
+        // the top color only moves increasingly (-->)
         // if (from < to) {
         //     out = true;
         // }
         out = (from < to)?true:false;
     } else {
-        // the white color only moves decreasingly (<--)
+        // the bottom color only moves decreasingly (<--)
         // if (from > to) {
         //     out = true;
         // }
@@ -64,7 +64,7 @@ function get_peak_color(real_peak) {
     } else if (tkstate[game_peak][1] == 0 && tkstate[game_peak][0] == 0) {
         console.log('[FAIL] En el pico '+real_peak+'('+game_peak+') está vacío, por lo tanto no tiene color.');
     } else {
-        console.log('[FAIL] En el pico '+real_peak+'('+game_peak+') hay tokens de 2 colores diferentes: black: '+tkstate[game_peak][0]+', white: '+tkstate[game_peak][0]+'.');
+        console.log('[FAIL] En el pico '+real_peak+'('+game_peak+') hay tokens de 2 colores diferentes: top: '+tkstate[game_peak][0]+', bottom: '+tkstate[game_peak][0]+'.');
     }
 }
 
@@ -72,17 +72,17 @@ function reset_move_states() {
     window.bgjs.move_state = 0;
     window.bgjs.peak_from = 0;
 
-    window.bgjs.black_tokens_taked_selected = false;
-    window.bgjs.white_tokens_taked_selected = false;
+    window.bgjs.top_tokens_taked_selected = false;
+    window.bgjs.bottom_tokens_taked_selected = false;
 }
 
 function is_the_peak_back(color, from, to) {
     var out = false;
     if (color == 0) {
-        // black
+        // top
         out = (from > to)?true:false;
     } else {
-        // white
+        // bottom
         out = (from < to)?true:false;
     }
     return out;

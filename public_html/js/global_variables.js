@@ -16,20 +16,20 @@ window.bgjs.ctx = 0;
 // colors
 window.bgjs.bg_color = "#262a2f";
 
-window.bgjs.black_stroke_color = "#ffffff";
-window.bgjs.black_fill_color = "#981f28";
-window.bgjs.black_text_color = "#ffffff";
-window.bgjs.white_stroke_color = "#000000";
-window.bgjs.white_fill_color = "#ffffff";
-window.bgjs.white_text_color = "#000000";
+window.bgjs.top_stroke_color = "#ffffff";
+window.bgjs.top_fill_color = "#981f28";
+window.bgjs.top_text_color = "#ffffff";
+window.bgjs.bottom_stroke_color = "#000000";
+window.bgjs.bottom_fill_color = "#ffffff";
+window.bgjs.bottom_text_color = "#000000";
 
-window.bgjs.black_peak_color = "#df6b74";
-window.bgjs.black_peak_selected_color = "#f1bfc3";
-window.bgjs.white_peak_color = "#aab1be";
-window.bgjs.white_peak_selected_color = "#e4e6ea";
+window.bgjs.top_peak_color = "#df6b74";
+window.bgjs.top_peak_selected_color = "#f1bfc3";
+window.bgjs.bottom_peak_color = "#aab1be";
+window.bgjs.bottom_peak_selected_color = "#e4e6ea";
 
-window.bgjs.black_tokens_taked_selected_color = "#434953";
-window.bgjs.white_tokens_taked_selected_color = "#434953";
+window.bgjs.top_tokens_taked_selected_color = "#434953";
+window.bgjs.bottom_tokens_taked_selected_color = "#434953";
 
 // --- GAME STATE -------------------------------------------------------------
 window.bgjs.game_pause = 0;
@@ -41,12 +41,12 @@ window.bgjs.doubling_cube = true;
 window.bgjs.doubling_cube_state = 64;
 
 // valores provisionales
-window.bgjs.black_tokens_out = 1;
-window.bgjs.white_tokens_out = 2;
-window.bgjs.black_tokens_taked = 0;
-window.bgjs.white_tokens_taked = 0;
-window.bgjs.black_tokens_taked_selected = false;
-window.bgjs.white_tokens_taked_selected = false;
+window.bgjs.top_tokens_out = 1;
+window.bgjs.bottom_tokens_out = 2;
+window.bgjs.top_tokens_taked = 0;
+window.bgjs.bottom_tokens_taked = 0;
+window.bgjs.top_tokens_taked_selected = false;
+window.bgjs.bottom_tokens_taked_selected = false;
 
 // --- BORAD ------------------------------------------------------------------
 window.bgjs.draw_numbers = true;
@@ -117,18 +117,18 @@ window.bgjs.vpeak = [
 ]
 
 // [(x1, y1), (x2, y2)]
-window.bgjs.black_tokens_taked_box = [[140, 110], [160, 130]];
-window.bgjs.white_tokens_taked_box = [[140, 150], [160, 170]];
+window.bgjs.top_tokens_taked_box = [[140, 110], [160, 130]];
+window.bgjs.bottom_tokens_taked_box = [[140, 150], [160, 170]];
 
 // --- TOKENS -----------------------------------------------------------------
 window.bgjs.tBw = 6; // token_border_width
 
-window.bgjs.black_tokens_taken = 0;
-window.bgjs.black_tokens_out = 0;
-window.bgjs.white_tokens_taken = 0;
-window.bgjs.white_tokens_out = 0;
+window.bgjs.top_tokens_taken = 0;
+window.bgjs.top_tokens_out = 0;
+window.bgjs.bottom_tokens_taken = 0;
+window.bgjs.bottom_tokens_out = 0;
 
-// [black, white]
+// [top, bottom]
 window.bgjs.tkstate = [
     [5, 0], // 12
     [0, 5], // 13
@@ -157,7 +157,7 @@ window.bgjs.tkstate = [
     [0, 2], // 24
 ]
 
-// [black, white]
+// [top, bottom]
 window.bgjs.tkstate_initial = [
     [5, 0], // 12
     [0, 5], // 13

@@ -7,8 +7,8 @@ function check_peak(cursorX, cursorY) {
         game_peaks = window.bgjs.game_peaks,
         vpeak = window.bgjs.vpeak,
         m = window.bgjs.m,
-        bttb = window.bgjs.black_tokens_taked_box,
-        wttb = window.bgjs.white_tokens_taked_box;
+        bttb = window.bgjs.top_tokens_taked_box,
+        wttb = window.bgjs.bottom_tokens_taked_box;
 
     // Pulsando sobre los picos
     var i = 0;
@@ -27,23 +27,23 @@ function check_peak(cursorX, cursorY) {
     }
 
     // Pulsando sobre las fichas comidas
-    if (window.bgjs.black_tokens_taked > 0) {
+    if (window.bgjs.top_tokens_taked > 0) {
         if (
             (cursorX >= bttb[0][0]*m && cursorX <= bttb[1][0]*m) &&
             (cursorY >= bttb[0][1]*m && cursorY <= bttb[1][1]*m)
         ) {
             console.log('[INFO] Seleccionados los tokens comidos del jugador negro.');
-            window.bgjs.black_tokens_taked_selected = true;
+            window.bgjs.top_tokens_taked_selected = true;
             refresh_board();
         }
     }
-    if (window.bgjs.white_tokens_taked > 0) {
+    if (window.bgjs.bottom_tokens_taked > 0) {
         if (
             (cursorX >= wttb[0][0]*m && cursorX <= wttb[1][0]*m) &&
             (cursorY >= wttb[0][1]*m && cursorY <= wttb[1][1]*m)
         ) {
             console.log('[INFO] Seleccionados los tokens comidos del jugador blanco.');
-            window.bgjs.white_tokens_taked_selected = true;
+            window.bgjs.bottom_tokens_taked_selected = true;
             refresh_board();
         }
     }

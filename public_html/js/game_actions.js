@@ -1,7 +1,7 @@
 // game_actions.js
 // (c) inoro 2019 GPL v3
 
-// color: black (0), white (1)
+// color: top (0), bottom (1)
 function simple_move_from_to_empty(color, from, to) {
     var tkstate = window.bgjs.tkstate;
     tkstate[n2game(from)][color]--;
@@ -10,16 +10,16 @@ function simple_move_from_to_empty(color, from, to) {
     refresh_board();
 }
 
-// color: black (0), white (1)
+// color: top (0), bottom (1)
 function simple_move_from_to_take(color, from, to) {
     var tkstate = window.bgjs.tkstate;
     tkstate[n2game(to)][invC(color)]--;
     tkstate[n2game(from)][color]--;
     tkstate[n2game(to)][color]++;
     if (color == 0) {
-        window.bgjs.white_tokens_taked++;
+        window.bgjs.bottom_tokens_taked++;
     } else {
-        window.bgjs.black_tokens_taked++;
+        window.bgjs.top_tokens_taked++;
     }
     console.log('[TAKE] color: '+color+', from: '+from+'('+tkstate[n2game(from)][color]+') >> to: '+to+'('+tkstate[n2game(to)][color]+')');
     refresh_board();
