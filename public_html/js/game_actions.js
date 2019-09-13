@@ -28,32 +28,36 @@ function move_states(peak) {
             console.log('[SELE] Pico '+peak+' seleccionado.');
             window.bgjs.move_state = 1;
         } else {
-            console.log('[FAIL] El peak seleccionado está vacío.');
+            console.log('[NONE] El pico seleccionado está vacío.');
         }
     } else if (window.bgjs.move_state == 1) {
         var
             from = window.bgjs.peak_from,
-            to = peak;
+            to = peak,
             color = get_peak_color(from);
 
         if (check_color_mov(color, from, to)) {
             var tkstate = window.bgjs.tkstate;
             if (tkstate[n2game(to)][invC(color)] == 1) {
-                reset_move_states()
+                reset_move_states();
                 simple_move_from_to_take(color, from, to);
             } else if (tkstate[n2game(to)][invC(color)] <= 1) {
-                reset_move_states()
+                reset_move_states();
                 simple_move_from_to_empty(color, from, to);
             } else {
-                console.log('[FAIL] Hay más de 1 ficha del color "'+invC(color)+'" en el pico de destino.');
+                console.log('[NONE] Hay más de 1 ficha del color "'+invC(color)+'" en el pico de destino.');
             }
         } else {
-            if (is_same_color(color, to)) {
+            if (is_peak_empty(to)) {
+                reset_move_states();
+                console.log('[INFO] Seleccionado como destino un pico vacío anterior, se desselecciona todo.');
+                refresh_board();
+            } else if (is_same_color(color, to)) {
                 window.bgjs.peak_from = to;
                 refresh_board();
                 console.log('[SELE] Pico '+to+' seleccionado.');
             } else {
-                console.log('[FAIL] Movimiento no permitido para este color.');
+                console.log('[NONE] Movimiento no permitido para este color.');
             }
         }
     }

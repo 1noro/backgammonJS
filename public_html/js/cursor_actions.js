@@ -30,6 +30,6 @@ function get_cursor_rel(e) {
     // console.log('[CLIC] rel_x: '+(cursorX-get_canvas_start_point().x)+', rel_y: '+(cursorY-get_canvas_start_point().y));
     cursorX_rel = cursorX-get_canvas_start_point().x;
     cursorY_rel = cursorY-get_canvas_start_point().y;
-    console.log('[CLIC] cursorX_rel: '+cursorX_rel+', cursorY_rel: '+cursorY_rel);
+    console.log('[CLIC] '+cursorX_rel+', '+cursorY_rel+' (cursorX_rel, cursorY_rel)');
     check_peak(cursorX_rel, cursorY_rel);
 }
