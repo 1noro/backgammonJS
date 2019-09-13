@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [20190913a] - 2019-09-13 11:15
 ### Changed
 - Ahora si seleccionas un pico previo en tu color no salta error, sino que se selecciona.
+- Cambiado el estilo de los dados cuando están en juego.
 ### Fixed
 - Pequeño bug al seleccionar picos vacíos.
 
