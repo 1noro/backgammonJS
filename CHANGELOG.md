@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Cambio de nombre de la función "get_peak_color" a "check_peak_ownership".
 - Cambio de nombre de la función "is_same_color" a "is_same_owner".
 - Cambio de nombres de variables en diferentes funciones de "game_utils.js".
+- Cambio del nombre "color" por "owner" en variables de diferentes funciones de "game_actions.js".
 
 ## [20190913a] - 2019-09-13 11:15
 ### Added
