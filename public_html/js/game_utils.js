@@ -75,3 +75,7 @@ function is_the_peak_back(owner, from, to) {
 function is_same_owner(owner, to) {
     return (owner == check_peak_ownership(to));
 }
+
+function is_different_owner(owner, to) {
+    return (owner != check_peak_ownership(to));
+}

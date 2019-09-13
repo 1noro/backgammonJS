@@ -11,23 +11,23 @@ function draw_peak(ctx, m, color, x1, y1, x2, y2, x3, y3) {
     ctx.fill();
 }
 
-function draw_top_peak(ctx, m, top_color, px) {
-    if (top_color) {draw_peak(ctx, m, window.bgjs.top_peak_color, px, 20, px+10, 120, px+20, 20);}
+function draw_top_peak(ctx, m, bottom_owner, px) {
+    if (bottom_owner) {draw_peak(ctx, m, window.bgjs.top_peak_color, px, 20, px+10, 120, px+20, 20);}
     else {draw_peak(ctx, m, window.bgjs.bottom_peak_color, px, 20, px+10, 110, px+20, 20);}
 }
 
-function draw_top_peak_selected(ctx, m, top_color, px) {
-    if (top_color) {draw_peak(ctx, m, window.bgjs.top_peak_selected_color, px, 20, px+10, 120, px+20, 20);}
+function draw_top_peak_selected(ctx, m, bottom_owner, px) {
+    if (bottom_owner) {draw_peak(ctx, m, window.bgjs.top_peak_selected_color, px, 20, px+10, 120, px+20, 20);}
     else {draw_peak(ctx, m, window.bgjs.bottom_peak_selected_color, px, 20, px+10, 110, px+20, 20);}
 }
 
-function draw_bottom_peak(ctx, m, top_color, px) {
-    if (top_color) {draw_peak(ctx, m, window.bgjs.bottom_peak_color, px, 260, px+10, 160, px+20, 260);}
+function draw_bottom_peak(ctx, m, bottom_owner, px) {
+    if (bottom_owner) {draw_peak(ctx, m, window.bgjs.bottom_peak_color, px, 260, px+10, 160, px+20, 260);}
     else {draw_peak(ctx, m, window.bgjs.top_peak_color, px, 260, px+10, 150, px+20, 260);}
 }
 
-function draw_bottom_peak_selected(ctx, m, top_color, px) {
-    if (top_color) {draw_peak(ctx, m, window.bgjs.bottom_peak_selected_color, px, 260, px+10, 160, px+20, 260);}
+function draw_bottom_peak_selected(ctx, m, bottom_owner, px) {
+    if (bottom_owner) {draw_peak(ctx, m, window.bgjs.bottom_peak_selected_color, px, 260, px+10, 160, px+20, 260);}
     else {draw_peak(ctx, m, window.bgjs.top_peak_selected_color, px, 260, px+10, 150, px+20, 260);}
 }
 
@@ -55,7 +55,7 @@ function draw_board(ctx, m) {
 
     // PICOS
     var mitad = 1;
-    var top_color = false;
+    var bottom_owner = false;
     var px = 20;
     var peak_number = 0;
     var game_peaks = window.bgjs.game_peaks;
@@ -65,14 +65,14 @@ function draw_board(ctx, m) {
         while (pico <= 6) {
 
             if (game_peaks[peak_number] == peak_from) {
-                draw_top_peak_selected(ctx, m, top_color, px);
-                draw_bottom_peak(ctx, m, top_color, px);
+                draw_top_peak_selected(ctx, m, bottom_owner, px);
+                draw_bottom_peak(ctx, m, bottom_owner, px);
             } else if (game_peaks[peak_number+1] == peak_from) {
-                draw_bottom_peak_selected(ctx, m, top_color, px);
-                draw_top_peak(ctx, m, top_color, px);
+                draw_bottom_peak_selected(ctx, m, bottom_owner, px);
+                draw_top_peak(ctx, m, bottom_owner, px);
             } else {
-                draw_top_peak(ctx, m, top_color, px);
-                draw_bottom_peak(ctx, m, top_color, px);
+                draw_top_peak(ctx, m, bottom_owner, px);
+                draw_bottom_peak(ctx, m, bottom_owner, px);
             }
 
             if (window.bgjs.draw_numbers) {
@@ -82,7 +82,7 @@ function draw_board(ctx, m) {
                 ctx.fillText(game_peaks[peak_number+1], (px+10)*m, 268*m);
             }
 
-            top_color=!top_color;
+            bottom_owner=!bottom_owner;
 
             px+=20;
             pico++;

@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Ahora se puede seleccionar visualmente las fichas comidas de ambos jugadores.
 - Todas las variables "black" ahora se llaman "top".
 - Todas las variables "white" ahora se llaman "bottom".
-- Todas las variables "rojo" ahora se llaman "top_color".
+- Todas las variables "rojo" ahora se llaman "bottom_owner".
 - Todas las funciones que contenían "move_states" en su nombre, ahora contienen "pkmove_states".
 - Cambio de nombre de la función "get_peak_color" a "check_peak_ownership".
 - Cambio de nombre de la función "is_same_color" a "is_same_owner".
